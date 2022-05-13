@@ -6,3 +6,4 @@ ffhqfacealignment-venv/
 *.pyc
 __pycache__/
 */__pycache__/
+lib/sfd/s3fd-619a316812.pth
