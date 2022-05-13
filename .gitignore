@@ -1,0 +1,8 @@
+.directory
+*/.directory
+*~
+.idea/
+ffhqfacealignment-venv/
+*.pyc
+__pycache__/
+*/__pycache__/
