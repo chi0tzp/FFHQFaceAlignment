@@ -29,7 +29,7 @@ First, you need to download the pretrained SFD [1] model using
 (ffhqfacealignment-venv) $ python download.py
 ```
 
-This will download and store under `lib/sfd` a pretrained model, which can also be found [here](https://drive.google.com/file/d/1IWqJUTAZCelAZrUzfU38zK_ZM25fK32S/view?usp=sharing). Then, you can use `align.py` in order to align and crop faces from a set of images under a given directory. Cropped images will be stored (using the same filename) under a given output directory (if given):
+This will download and store under `lib/sfd` a pretrained model, which can also be found [here](https://drive.google.com/file/d/1IWqJUTAZCelAZrUzfU38zK_ZM25fK32S/view?usp=sharing). Then, you can use `align.py` in order to align and crop faces from a set of images under a given directory. Cropped images will be stored (using the same filename) under a given output directory (if given) in a given resolution (256x256 by default) -- for more details run `python align.py -h`:
 
 ```bash
 (ffhqfacealignment-venv) $ python align.py --input-dir=<directory of original images> --output-dir=<directory of cropped images> --size=<cropped image resolution>
@@ -41,12 +41,14 @@ For example,
 (ffhqfacealignment-venv) $ python align.py --input-dir=demo_images
 ```
 
+will align and crop the faces of images in `demo_images/` and store the results (i.e., 256x256 aligned face images) under `demo_images_aligned/`.
+
 
 
 ## Credits
 
- - [S³FD: Single Shot Scale-invariant Face Detector](https://github.com/sfzhang15/SFD) 
- - [Face alignment](https://github.com/1adrianb/face-alignment)
+ - [Face Detector [1]](https://github.com/sfzhang15/SFD) 
+ - [Face alignment [2]](https://github.com/1adrianb/face-alignment)
 
 
 
