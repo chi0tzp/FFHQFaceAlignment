@@ -11,6 +11,8 @@ from PIL import Image
 import scipy.ndimage
 from lib.landmarks_pytorch import LandmarksEstimation
 
+IMAGE_EXT = ('.jpg', '.jpeg', '.png')
+
 
 def align_crop_image(image, landmarks, transform_size=256):
     # Get estimated landmarks
@@ -120,7 +122,7 @@ def main():
 
     # Get input images paths
     input_images = [osp.join(input_dir, dI) for dI in os.listdir(input_dir)
-                    if osp.isfile(osp.join(input_dir, dI)) and osp.splitext(dI)[-1] in ('.jpg', '.png')]
+                    if osp.isfile(osp.join(input_dir, dI)) and osp.splitext(dI)[-1] in IMAGE_EXT]
     input_images.sort()
 
     # Build landmark estimator
